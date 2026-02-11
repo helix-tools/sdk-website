@@ -16,6 +16,24 @@ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+## Viewing Production Docs Locally
+
+To view the production SDK documentation locally (e.g., for testing or offline access):
+
+1. **Sync from S3:**
+   ```bash
+   aws s3 sync s3://helix-sdk-docs-production . --profile helix
+   ```
+
+2. **Serve locally:**
+   ```bash
+   npx serve . -p 3000
+   # or
+   python -m http.server 3000
+   ```
+
+3. **Access at:** http://localhost:3000
+
 ## Build
 
 ```bash
