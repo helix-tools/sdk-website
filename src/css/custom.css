@@ -1,0 +1,84 @@
+/**
+ * Helix SDK Documentation - Custom Styles
+ */
+
+:root {
+  --ifm-color-primary: #6366f1; /* Indigo-500 */
+  --ifm-color-primary-dark: #4f46e5; /* Indigo-600 */
+  --ifm-color-primary-darker: #4338ca; /* Indigo-700 */
+  --ifm-color-primary-darkest: #3730a3; /* Indigo-800 */
+  --ifm-color-primary-light: #818cf8; /* Indigo-400 */
+  --ifm-color-primary-lighter: #a5b4fc; /* Indigo-300 */
+  --ifm-color-primary-lightest: #c7d2fe; /* Indigo-200 */
+  
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.1);
+  
+  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-font-family-monospace: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #818cf8; /* Indigo-400 */
+  --ifm-color-primary-dark: #6366f1; /* Indigo-500 */
+  --ifm-color-primary-darker: #4f46e5; /* Indigo-600 */
+  --ifm-color-primary-darkest: #4338ca; /* Indigo-700 */
+  --ifm-color-primary-light: #a5b4fc; /* Indigo-300 */
+  --ifm-color-primary-lighter: #c7d2fe; /* Indigo-200 */
+  --ifm-color-primary-lightest: #e0e7ff; /* Indigo-100 */
+  
+  --docusaurus-highlighted-code-line-bg: rgba(129, 140, 248, 0.15);
+}
+
+/* Clean table styles */
+table {
+  width: 100%;
+}
+
+table th {
+  background: var(--ifm-color-primary-lightest);
+}
+
+[data-theme='dark'] table th {
+  background: rgba(99, 102, 241, 0.2);
+}
+
+/* Code block enhancements */
+.prism-code {
+  font-size: 0.9rem;
+}
+
+/* Sidebar enhancements */
+.menu__link--sublist-caret::after {
+  background-size: 1.5rem 1.5rem;
+}
+
+/* Hero section for landing page (if needed later) */
+.hero--primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #818cf8 100%);
+}
+
+/* SDK badges */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.badge--typescript {
+  background: #3178c6;
+  color: white;
+}
+
+.badge--python {
+  background: #3776ab;
+  color: white;
+}
+
+.badge--go {
+  background: #00add8;
+  color: white;
+}
