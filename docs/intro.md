@@ -26,35 +26,26 @@ Helix Connect is a secure, scalable platform for exchanging datasets between dat
 
 ## Key Features
 
-### Security First
+### Enterprise-Grade Security
 
-All SDKs implement:
-- **AWS SigV4 authentication** for API requests
-- **AES-256-GCM envelope encryption** for data at rest
-- **Compress-then-encrypt pipeline** with ~90% space savings
-- **KMS-backed key management**
+Your data is protected with industry-leading security standards:
+- **End-to-end encryption** — Data is encrypted in transit and at rest
+- **Secure authentication** — API keys with fine-grained access control
+- **Compliance ready** — Built for enterprise security requirements
 
-### Role-Based Access
+### Simple Integration
 
-```
-HelixConsumer (base class)
-    ↓
-HelixProducer (adds upload capabilities)
-    ↓
-HelixAdmin (adds platform management)
-```
+Three straightforward classes for every use case:
+- **Consumer** — Subscribe to and download datasets from producers
+- **Producer** — Publish your datasets to subscribers
+- **Admin** — Manage your organization's platform settings
 
-Each class inherits all capabilities from its parent:
-- **Consumers** can download and subscribe to datasets
-- **Producers** can also upload datasets
-- **Admins** can manage customers and platform settings
+### Real-Time Updates
 
-### Notifications
-
-Subscribe to dataset updates and receive real-time notifications:
-- SQS-based message queue
-- Long-polling support
-- Auto-download on notification
+Never miss a dataset update:
+- **Instant notifications** when new data is available
+- **Automatic downloads** — configure once, receive updates automatically
+- **Flexible polling** — pull updates on your schedule
 
 ## Quick Start
 
