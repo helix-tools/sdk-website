@@ -16,6 +16,9 @@
   
   --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --ifm-font-family-monospace: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  
+  --ifm-heading-font-weight: 700;
+  --ifm-footer-background-color: #1a1a2e;
 }
 
 [data-theme='dark'] {
@@ -28,19 +31,28 @@
   --ifm-color-primary-lightest: #e0e7ff; /* Indigo-100 */
   
   --docusaurus-highlighted-code-line-bg: rgba(129, 140, 248, 0.15);
+  --ifm-background-color: #0f0f1a;
+  --ifm-background-surface-color: #1a1a2e;
+  --ifm-footer-background-color: #0a0a14;
 }
 
 /* Clean table styles */
 table {
   width: 100%;
+  border-collapse: collapse;
 }
 
 table th {
   background: var(--ifm-color-primary-lightest);
+  font-weight: 600;
 }
 
 [data-theme='dark'] table th {
   background: rgba(99, 102, 241, 0.2);
+}
+
+table td, table th {
+  padding: 0.75rem 1rem;
 }
 
 /* Code block enhancements */
@@ -48,9 +60,30 @@ table th {
   font-size: 0.9rem;
 }
 
+pre {
+  border-radius: 8px !important;
+}
+
+code {
+  border-radius: 4px;
+}
+
 /* Sidebar enhancements */
 .menu__link--sublist-caret::after {
   background-size: 1.5rem 1.5rem;
+}
+
+.menu__link {
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.menu__link:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.menu__link--active {
+  background-color: rgba(99, 102, 241, 0.15) !important;
 }
 
 /* Hero section for landing page (if needed later) */
@@ -81,4 +114,134 @@ table th {
 .badge--go {
   background: #00add8;
   color: white;
+}
+
+/* Navbar enhancements */
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navbar__logo {
+  height: 2rem;
+}
+
+.navbar__title {
+  font-weight: 700;
+}
+
+/* Footer enhancements */
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.footer__title {
+  font-weight: 600;
+  color: var(--ifm-color-primary-light);
+}
+
+.footer__link-item {
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.footer__link-item:hover {
+  opacity: 1;
+}
+
+.footer__logo {
+  margin-bottom: 1rem;
+}
+
+/* Admonitions/callouts */
+.admonition {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+/* Tabs enhancements */
+.tabs {
+  margin-bottom: 1rem;
+}
+
+.tabs__item {
+  border-radius: 6px 6px 0 0;
+  font-weight: 500;
+}
+
+.tabs__item--active {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+/* Markdown content */
+.markdown h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.markdown h3 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+}
+
+/* Horizontal rules */
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ifm-color-emphasis-300), transparent);
+  margin: 3rem 0;
+}
+
+/* Links */
+.markdown a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.markdown a:hover {
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+/* Search */
+.DocSearch-Button {
+  border-radius: 8px !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 996px) {
+  .navbar__items--right {
+    gap: 0.5rem;
+  }
+  
+  .footer__links {
+    flex-direction: column;
+  }
+  
+  .footer__col {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .footer,
+  .pagination-nav,
+  .theme-doc-sidebar-container {
+    display: none !important;
+  }
+  
+  .markdown {
+    max-width: 100% !important;
+  }
 }

@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Helix SDK Documentation',
   tagline: 'Official SDKs for the Helix Connect Data Marketplace',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   future: {
     v4: true,
@@ -63,6 +63,16 @@ const config: Config = {
           label: 'Documentation',
         },
         {
+          to: '/common-patterns',
+          label: 'Recipes',
+          position: 'left',
+        },
+        {
+          to: '/troubleshooting',
+          label: 'Troubleshooting',
+          position: 'left',
+        },
+        {
           href: 'https://helix.tools',
           label: 'Helix Connect',
           position: 'right',
@@ -81,16 +91,33 @@ const config: Config = {
           title: 'SDKs',
           items: [
             {
-              label: 'TypeScript',
+              label: 'TypeScript SDK',
               to: '/typescript/installation',
             },
             {
-              label: 'Python',
+              label: 'Python SDK',
               to: '/python/installation',
             },
             {
-              label: 'Go',
+              label: 'Go SDK',
               to: '/go/installation',
+            },
+          ],
+        },
+        {
+          title: 'Guides',
+          items: [
+            {
+              label: 'Getting Started',
+              to: '/',
+            },
+            {
+              label: 'Common Patterns',
+              to: '/common-patterns',
+            },
+            {
+              label: 'Troubleshooting',
+              to: '/troubleshooting',
             },
           ],
         },
@@ -98,7 +125,7 @@ const config: Config = {
           title: 'Resources',
           items: [
             {
-              label: 'Helix Connect',
+              label: 'Helix Connect Platform',
               href: 'https://helix.tools',
             },
             {
@@ -106,7 +133,7 @@ const config: Config = {
               href: 'https://api.helix.tools/docs',
             },
             {
-              label: 'Status',
+              label: 'Status Page',
               href: 'https://status.helix.tools',
             },
           ],
@@ -122,16 +149,35 @@ const config: Config = {
               label: 'Email Support',
               href: 'mailto:support@helix.tools',
             },
+            {
+              label: 'Security',
+              href: 'mailto:security@helix.tools',
+            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Helix Tools. Built with Docusaurus.`,
+      logo: {
+        alt: 'Helix Tools Logo',
+        src: 'img/logo.svg',
+        href: 'https://helix.tools',
+        width: 50,
+        height: 50,
+      },
+      copyright: `Copyright © ${new Date().getFullYear()} Helix Tools, Inc. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['bash', 'python', 'go', 'json'],
+      additionalLanguages: ['bash', 'python', 'go', 'json', 'yaml'],
     },
+    // Announcement bar for important updates
+    // announcementBar: {
+    //   id: 'v2_announcement',
+    //   content: '🎉 SDK v2.0 is now available! <a href="/changelog">See what\'s new</a>',
+    //   backgroundColor: '#6366f1',
+    //   textColor: '#fff',
+    //   isCloseable: true,
+    // },
   } satisfies Preset.ThemeConfig,
 };
 

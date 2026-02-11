@@ -3,6 +3,8 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   sdkSidebar: [
     'intro',
+    'common-patterns',
+    'troubleshooting',
     {
       type: 'category',
       label: 'TypeScript SDK',
@@ -11,6 +13,7 @@ const sidebars: SidebarsConfig = {
         'typescript/installation',
         'typescript/consumer',
         'typescript/producer',
+        'typescript/admin',
       ],
     },
     {
@@ -20,6 +23,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'python/installation',
         'python/usage',
+        'python/advanced',
       ],
     },
     {
@@ -29,6 +33,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'go/installation',
         'go/usage',
+        'go/advanced',
       ],
     },
   ],
